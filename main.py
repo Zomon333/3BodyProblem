@@ -223,11 +223,9 @@ def main():
 
     # Adjust turtle sizes to represent celestial bodies
     screen = Screen()
+    earth_image = '.\\earth.gif'
     screen.bgcolor('black')
-    earth_image = 'C:\\Users\\Dagan\\Desktop\\3BodyProblem\\3BodyProblem\
-    \\earth.gif'
-    moon_image = 'C:\\Users\\Dagan\\Desktop\\3BodyProblem\\3BodyProblem\
-    \\moon.gif'
+    moon_image = '.\\moon.gif'
     screen.register_shape(earth_image)
     screen.register_shape(moon_image)
 
@@ -353,6 +351,7 @@ def main():
             lagrange.dV -= 25
         if lagrange.dV < 0:
             lagrange.dV = 0
+
 
     turtle.Screen().listen()
     turtle.Screen().onclick(accel)
@@ -523,4 +522,5 @@ if __name__ == "__main__":
     try:
         main()
     except tkinter.TclError:
+        print("TCLError")
         pass
